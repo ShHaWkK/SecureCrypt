@@ -2,14 +2,14 @@
 #define DECRYPTEUR_H
 
 #include <string>
+#include <memory>
 
 class Decrypteur {
 public:
-    explicit Decrypteur(int decalage);
-    std::string decrypter(const std::string& message);
-
-private:
-    int decalage;
+    virtual ~Decrypteur() = default;
+    virtual std::string decrypter(const std::string& message) = 0;
 };
+
+std::unique_ptr<Decrypteur> createDecrypteur(const std::string& type, int key);
 
 #endif // DECRYPTEUR_H
