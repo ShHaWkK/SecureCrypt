@@ -4,19 +4,25 @@
 #include "../include/decrypteur.h"
 
 int main() {
-    std::string messageOriginal;
-    std::string messageCrypte;
-    std::string messageDecrypte;
+    std::string type, message;
+    int key;
+
+    std::cout << "Entrez le type de chiffrement (cesar/vigenere/etc): ";
+    std::cin >> type;
+    std::cout << "Entrez la clé (nombre pour cesar, mot pour vigenere): ";
+    std::cin >> key;
 
     std::cout << "Entrez le message à crypter: ";
-    getline(std::cin, messageOriginal);
+    std::cin.ignore();
+    std::getline(std::cin, message);
 
-    // Cryptage
-    messageCrypte = crypter(messageOriginal);
+    auto crypteur = createCrypteur(type, key);
+    auto decrypteur = createDecrypteur(type, key);
+
+    std::string messageCrypte = crypteur->crypter(message);
+    std::string messageDecrypte = decrypteur->decrypter(messageCrypte);
+
     std::cout << "Message crypté: " << messageCrypte << std::endl;
-
-    // Décryptage
-    messageDecrypte = decrypter(messageCrypte);
     std::cout << "Message décrypté: " << messageDecrypte << std::endl;
 
     return 0;
