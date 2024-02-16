@@ -12,4 +12,4 @@ public:
 
 std::unique_ptr<Crypteur> createCrypteur(const std::string& type, int key);
 
-#endif // CRYPTEUR_H
+#endif 
