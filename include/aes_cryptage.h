@@ -6,7 +6,7 @@
 
 class AESCryptage : public CryptageInterface {
 public:
-    AESCryptage(const std::string& cle); // Constructeur avec clé
+    AESCryptage(const std::string& cle); 
     std::string crypter(const std::string& message) override;
     std::string decrypter(const std::string& message) override;
 
@@ -15,4 +15,4 @@ private:
     AES_KEY cleDecrypt;
 };
 
-#endif // AES_CRYPTAGE_H
+#endif 
