@@ -12,4 +12,4 @@ public:
 
 std::unique_ptr<Decrypteur> createDecrypteur(const std::string& type, int key);
 
-#endif // DECRYPTEUR_H
+#endif 
