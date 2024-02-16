@@ -11,4 +11,4 @@ public:
     virtual std::string decrypter(const std::string& message) = 0;
 };
 
-#endif // INTERFACE_H
+#endif 
