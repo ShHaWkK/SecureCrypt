@@ -3,7 +3,8 @@
 #include "../include/crypteur.h"
 #include "../include/decrypteur.h"
 
-int main() {
+int main() 
+{
     
     std::string type, message;
     int key;
