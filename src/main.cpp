@@ -4,6 +4,7 @@
 #include "../include/decrypteur.h"
 
 int main() {
+    
     std::string type, message;
     int key;
 
