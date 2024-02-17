@@ -6,7 +6,6 @@
 class CryptageInterface {
 public:
     virtual ~CryptageInterface() = default;
-
     virtual std::string crypter(const std::string& message) = 0;
     virtual std::string decrypter(const std::string& message) = 0;
 };
